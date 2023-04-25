@@ -2,6 +2,12 @@
   "image": "mcr.microsoft.com/devcontainers/python:3.10",
   "features": {
     "ghcr.io/devcontainers-contrib/features/black:2": {},    
-    "ghcr.io/devcontainers-contrib/features/poetry": {}
-  }
+    "ghcr.io/devcontainers-contrib/features/poetry": {},
+    "ghcr.io/devcontainers-contrib/features/pre-commit": {},
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "latest"
+		}
+  },
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "poetry install"
 }
